@@ -9,8 +9,8 @@ class ApiService {
     if (kIsWeb) {
       return 'http://localhost:5000/api';
     }
-    // Mobile device / Wi-Fi IP (Laptop Node.js backend)
-    return 'http://192.168.43.232:5000/api';
+    // Global Localtunnel URL (Works on 4G/5G/Any Wi-Fi worldwide)
+    return 'https://foundit-app-api.loca.lt/api';
   }
 
   /// Helper to format relative/absolute image URLs cleanly
