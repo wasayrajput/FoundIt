@@ -20,21 +20,22 @@ jobs:
           java-version: '17'
 
       - name: 🐦 Setup Flutter SDK
-        uses: actions/setup-flutter@v2
+        uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          flutter-version: '3.44.2'
 
       - name: 📦 Install Flutter Dependencies
         run: |
+          if [ -d "Foundit" ]; then cd Foundit; fi
           flutter pub get
 
       - name: 🛠️ Build Release APK
         run: |
+          if [ -d "Foundit" ]; then cd Foundit; fi
           flutter build apk --release
 
       - name: 📤 Upload Release APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: foundit-release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: '**/build/app/outputs/flutter-apk/app-release.apk'
