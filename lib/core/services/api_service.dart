@@ -10,7 +10,7 @@ class ApiService {
       return 'http://localhost:5000/api';
     }
     // Mobile device / Wi-Fi IP (Laptop Node.js backend)
-    return 'http://192.168.0.105:5000/api';
+    return 'http://192.168.43.232:5000/api';
   }
 
   /// Helper to format relative/absolute image URLs cleanly
