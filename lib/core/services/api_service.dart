@@ -9,8 +9,8 @@ class ApiService {
     if (kIsWeb) {
       return 'http://localhost:5000/api';
     }
-    // Local Laptop IP over Wi-Fi / Mobile Hotspot
-    return 'http://192.168.43.232:5000/api';
+    // Local Laptop IP over Home Wi-Fi
+    return 'http://192.168.0.105:5000/api';
   }
 
   /// Helper to format relative/absolute image URLs cleanly
