@@ -9,8 +9,8 @@ class ApiService {
     if (kIsWeb) {
       return 'http://localhost:5000/api';
     }
-    // Global Localtunnel URL (Works on 4G/5G/Any Wi-Fi worldwide)
-    return 'https://foundit-app-api.loca.lt/api';
+    // Local Laptop IP over Wi-Fi / Mobile Hotspot
+    return 'http://192.168.43.232:5000/api';
   }
 
   /// Helper to format relative/absolute image URLs cleanly
