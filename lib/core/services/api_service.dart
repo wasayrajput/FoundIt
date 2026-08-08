@@ -9,8 +9,8 @@ class ApiService {
     if (kIsWeb) {
       return 'http://localhost:5000/api';
     }
-    // Local Laptop IP over Home Wi-Fi
-    return 'http://192.168.0.105:5000/api';
+    // Permanent Vercel Cloud Server (24/7 Global Access)
+    return 'https://foundit-backend.vercel.app/api';
   }
 
   /// Helper to format relative/absolute image URLs cleanly
