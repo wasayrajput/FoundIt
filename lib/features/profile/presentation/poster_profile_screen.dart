@@ -7,7 +7,6 @@ import 'package:foundit/features/profile/domain/user_profile_model.dart';
 import 'package:foundit/features/post/presentation/post_detail_screen.dart';
 import 'package:foundit/features/profile/presentation/widgets/profile_post_card.dart';
 import 'package:foundit/features/home/data/dummy_data.dart';
-import 'package:foundit/features/profile/data/profile_dummy_data.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -41,7 +40,7 @@ class _PosterProfileScreenState extends State<PosterProfileScreen> {
         widget.user.name == 'John Doe (You)';
 
     if (isMyProfile) {
-      final myPosts = [...ProfileDummyData.myPosts, ...AppState.instance.myPosts]
+      final myPosts = AppState.instance.myPosts
           .where((post) => !AppState.instance.isDeleted(post.id))
           .toList();
       if (mounted) {
